@@ -3,10 +3,10 @@ const inputEl = (document.getElementsByClassName('app__control__input'))[0] //с
 const btnEl = (document.getElementsByClassName('app__control__btn'))[0]/// тоже самое но для кнопки добавления
 const listEl = (document.getElementsByClassName("app__list"))[0]/// div который будет хранить в себе все таски
 
-let counter = 1 //счетчик для задания id для каждой задачи
+let counter = 1 //счетчик для задания id для каждой задачи 
 
 
-function loadData() { //функция для получения данных из localStorage
+function loadData() { //функция для получения данных из loсаlStorage
     const savedData = localStorage.getItem('tasks') //обращается к localStorage и пытается получить данные, сохраненные под ключом 'tasks'
     return savedData ? JSON.parse(savedData) : [] //тернарный оператор который проверяет есть ли сохраненные данные
 }
@@ -31,7 +31,7 @@ const data = loadData() //содержит все таски которые бы
 // }
 
 data.forEach((item) => {  ///перебирает каждый элемент массива data
-    if (item.id >= counter) { //нужно для того чтобы были разные id, не повторялись
+    if (item.id >= counter) { //нужно для того чтобы были разные id,  т.е. не повторялись
         counter = item.id + 1;
     }
 });
