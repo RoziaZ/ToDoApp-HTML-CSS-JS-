@@ -1,7 +1,7 @@
 const inputEl = (document.getElementsByClassName('app__control__input'))[0] //создаем переменную для html элемента из index.html (поле ввода); происходит поиск и получение элемента 
-//по классу, точнее элементов (происходит сохранение в виде массива), но т.к. у нас 1 элемент с таким классом, берем первый элемент [0]
+//по классу, точнее элементов (происходит сохранение в виде массива), но т.к. у нас только 1 с таким классом, берем первый [0]
 const btnEl = (document.getElementsByClassName('app__control__btn'))[0]/// тоже самое но для кнопки добавления
-const listEl = (document.getElementsByClassName("app__list"))[0]/// div который будет хранить в себе все таски
+const listEl = (document.getElementsByClassName("app__list"))[0]/// div который будет хранить в себе все задачи
 
 let counter = 1 //счетчик для задания id для каждой задачи 
 
@@ -73,7 +73,7 @@ function createTask(objectData){ ///создание таски
     img.src = "vedro.png"
     img.alt = "удалить"
 
-    btn.appendChild(img) ///типа пакет в пакете
+    btn.appendChild(img) 
 
     btn.addEventListener('click', (event)=> {
         event.stopPropagation();
